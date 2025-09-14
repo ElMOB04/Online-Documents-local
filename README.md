@@ -253,9 +253,9 @@ graph TD
 
 ¿Necesitas ayuda? 
 
-- 📧 **Email**: soporte@tudominio.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/tu-usuario/Online-Documents-local/issues)
-- 📖 **Wiki**: [Documentación completa](https://github.com/tu-usuario/Online-Documents-local/wiki)
+- 📧 **Email**: alexjose042121@gmail.com
+- 🐛 **Issues**: [GitHub Issues](https://github.com/ElMOB04)
+- -  **linkedin**: [linkedin](https://www.linkedin.com/in/alejandro-suarez-083261233/)
 
 ---
 
@@ -286,5 +286,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 **Desarrollado con ❤️ por [ElMOB04](https://github.com/ElMOB04)**
 
 </div>
+
 
 
