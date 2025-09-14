@@ -165,16 +165,16 @@
 <div align="center">
 
 ### 🏠 Dashboard Principal
-![Dashboard](assets/img/screenshots/dashboard.png)
+![Dashboard]([assets/img/screenshots/dashboard.png])
 
 ### 📋 Gestión de Pedidos
-![Pedidos](assets/img/screenshots/pedidos.png)
+![Pedidos](http://imgfz.com/i/8iHhx3o.jpeg)
 
 ### 📄 Gestión de Documentos
-![Documentos](assets/img/screenshots/documentos.png)
+![Documentos](http://imgfz.com/i/S18JDLj.jpeg)
 
 ### 👥 Gestión de Usuarios
-![Usuarios](assets/img/screenshots/usuarios.png)
+![Usuarios](http://imgfz.com/i/Rh9M6db.jpeg)
 
 </div>
 
@@ -283,6 +283,7 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ---
 
-**Desarrollado con ❤️ por [Tu Nombre](https://github.com/tu-usuario)**
+**Desarrollado con ❤️ por [ElMOB04](https://github.com/ElMOB04)**
 
 </div>
+
