@@ -165,7 +165,7 @@
 <div align="center">
 
 ### 🏠 Dashboard Principal
-![Dashboard]([assets/img/screenshots/dashboard.png])
+![Dashboard](http://imgfz.com/i/cZrM50R.jpeg)
 
 ### 📋 Gestión de Pedidos
 ![Pedidos](http://imgfz.com/i/8iHhx3o.jpeg)
@@ -286,4 +286,5 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 **Desarrollado con ❤️ por [ElMOB04](https://github.com/ElMOB04)**
 
 </div>
+
 
