@@ -158,27 +158,7 @@
 - `rechazada` - Rechazado
 - `cerrada` - Proceso completado
 
----
 
-## 📱 **Capturas de Pantalla**
-
-<div align="center">
-
-### 🏠 Dashboard Principal
-![Dashboard](assets/img/screenshots/dashboard.png)
-
-### 📋 Gestión de Pedidos
-![Pedidos](assets/img/screenshots/pedidos.png)
-
-### 📄 Gestión de Documentos
-![Documentos](assets/img/screenshots/documentos.png)
-
-### 👥 Gestión de Usuarios
-![Usuarios](assets/img/screenshots/usuarios.png)
-
-</div>
-
----
 
 ## 🛠️ **Funcionalidades Técnicas**
 
@@ -283,6 +263,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 
 ---
 
-**Desarrollado con ❤️ por [Tu Nombre](https://github.com/tu-usuario)**
+**Desarrollado con ❤️ por [ElMOB04]([https://github.com/tu-usuario](https://github.com/ElMOB04))**
 
 </div>
