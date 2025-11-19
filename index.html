@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="es" class="theme-light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solicitud de Préstamo - Cooperativa</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Tipografías Premium Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main class="container">
+      <!-- ENCABEZADO CORPORATIVO PREMIUM -->
+      <header class="hero">
+        <div class="logo">
+          <img id="publicLogo" src="./logodecoopatria.png" alt="Logo" style="height:100%;width:100%;display:block;object-fit:contain" />
+          <svg id="publicLogoFallback" width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <defs>
+              <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0E5DE6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#3AA6F2;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect width="100" height="100" rx="20" fill="url(#logoBg)"></rect>
+            <text x="50" y="60" fill="#fff" font-size="56" font-family="Poppins, Arial" font-weight="700" text-anchor="middle">C</text>
+          </svg>
+        </div>
+        <div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="flex:1">
+              <h1>Solicitud de Préstamo</h1>
+              <p class="lead">Formulario seguro y confidencial • Sus datos se protegen en la nube</p>
+            </div>
+            <div class="header-actions">
+              <!-- theme toggle removed to keep headings white in dark mode -->
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- TARJETA PRINCIPAL GLASSMORPHISM -->
+      <section class="card form-card">
+        <form id="loanForm" novalidate>
+          <!-- BARRA DE PROGRESO MODERNA -->
+          <div class="progress-wrapper">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 25%"></div>
+            </div>
+            <div class="steps">
+              <div class="step active" data-step="1">
+                <div class="step-circle">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/>
+                  </svg>
+                </div>
+                <div class="step-label">
+                  <div class="step-number">Paso 1</div>
+                  <div class="step-name">Datos Personales</div>
+                </div>
+              </div>
+
+              <div class="step" data-step="2">
+                <div class="step-circle">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-2.96-3.83c-.3-.38-.94-.42-1.3-.1-.36.32-.39.97-.09 1.35l3.62 4.71c.2.26.56.42.92.42s.72-.16.92-.42l3.82-4.9c.29-.38.26-1.02-.1-1.35-.36-.31-1-.27-1.3.1l-.96 1.48z"/>
+                  </svg>
+                </div>
+                <div class="step-label">
+                  <div class="step-number">Paso 2</div>
+                  <div class="step-name">Contacto</div>
+                </div>
+              </div>
+
+              <div class="step" data-step="3">
+                <div class="step-circle">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
+                <div class="step-label">
+                  <div class="step-number">Paso 3</div>
+                  <div class="step-name">Garante</div>
+                </div>
+              </div>
+
+              <div class="step" data-step="4">
+                <div class="step-circle">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                  </svg>
+                </div>
+                <div class="step-label">
+                  <div class="step-number">Paso 4</div>
+                  <div class="step-name">Autorización</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PASO 1: DATOS PERSONALES -->
+          <fieldset class="panel" data-panel="1">
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Datos Personales</h2>
+                <p class="section-subtitle">Información básica de identificación</p>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Cédula *</label>
+                <input type="text" id="v_cedula" placeholder="000-0000000-0" pattern="[0-9\-]+" required />
+              </div>
+              <div class="form-group">
+                <label>Edad *</label>
+                <select id="v_edad" required>
+                  <option value="">Seleccione rango</option>
+                  <option value="18-25">18 - 25 años</option>
+                  <option value="26-35">26 - 35 años</option>
+                  <option value="36-45">36 - 45 años</option>
+                  <option value="46-55">46 - 55 años</option>
+                  <option value="56+">56 años o más</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Estado Civil *</label>
+                <select id="v_estado_civil" required>
+                  <option value="">Seleccione</option>
+                  <option value="Soltero(a)">Soltero(a)</option>
+                  <option value="Casado(a)">Casado(a)</option>
+                  <option value="Unión Libre">Unión Libre</option>
+                  <option value="Divorciado(a)">Divorciado(a)</option>
+                  <option value="Viudo(a)">Viudo(a)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Fecha de Nacimiento *</label>
+                <input type="date" id="v_fecha_nacimiento" required />
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Profesión u Oficio *</label>
+                <input type="text" id="v_profesion" placeholder="Ej: Contador" required />
+              </div>
+              <div class="form-group">
+                <label>Teléfono Residencia *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="v_tel_residencia" placeholder="8290000000" pattern="[0-9]+" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Dirección Completa *</label>
+              <input type="text" id="v_direccion_completa" placeholder="Calle, número, sector, ciudad" required />
+            </div>
+
+            <div class="form-group">
+              <label>Entre qué calles reside <small style="font-weight:600;color:var(--text-muted)">(referencia)</small></label>
+              <input type="text" id="v_calles" placeholder="Entre la Calle A y la Calle B" />
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Nombre del Cónyuge <small style="font-weight:600;color:var(--text-muted)">(si aplica)</small></label>
+                <input type="text" id="v_conyuge_nombre" placeholder="Nombre del cónyuge" />
+              </div>
+              <div class="form-group">
+                <label>Teléfono del Cónyuge</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="v_conyuge_tel" placeholder="8290000000" pattern="[0-9]+" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Nombres *</label>
+                <input type="text" id="v_nombre_completo" placeholder="Nombre completo" required />
+              </div>
+              <div class="form-group">
+                <label>Apellidos *</label>
+                <input type="text" id="v_apellido" placeholder="Apellidos" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Zona donde vive *</label>
+              <select id="v_zona" required>
+                <option value="">Seleccione zona</option>
+                <option value="Santo Domingo">Santo Domingo</option>
+                <option value="Santiago">Santiago</option>
+                <option value="La Romana">La Romana</option>
+                <option value="Puerto Plata">Puerto Plata</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn btn-primary big" id="toStep2">
+                Continuar →
+              </button>
+            </div>
+          </fieldset>
+
+          <!-- PASO 2: DATOS DE CONTACTO E INFORMACIÓN FINANCIERA -->
+          <fieldset class="panel hidden" data-panel="2">
+            <!-- SUBSECCIÓN 1: DATOS DE CONTACTO -->
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Datos de Contacto</h2>
+                <p class="section-subtitle">Teléfono y correo electrónico</p>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Teléfono Celular *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="s_telefono" placeholder="8298766762" pattern="[0-9]+" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Confirmar Teléfono *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="s_telefono_confirm" placeholder="8298766762" pattern="[0-9]+" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>WhatsApp (opcional)</label>
+                <input type="tel" id="s_movil" placeholder="+1 829 876 6762" />
+              </div>
+              <div class="form-group">
+                <label>Correo Electrónico <small style="font-weight:600;color:var(--text-muted)">(opcional)</small></label>
+                <input type="email" id="s_email" placeholder="ejemplo@correo.com" />
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- SUBSECCIÓN 2: INFORMACIÓN FINANCIERA -->
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M11.8 10.9c-2.27-.59-3-1.38-3-2.15 0-1.09.9-1.85 2.05-1.85 1.54 0 2.63 1.08 2.84 2.88h2.02c-.3-2.22-1.69-4.04-4.89-4.35V2h-2v2.26c-2.31.08-4.1 1.51-4.1 3.85 0 2.92 2.88 3.96 5.26 4.41 2.28.45 3 1.3 3 2.15 0 .8-.72 1.72-2.12 1.72-1.6 0-2.67-.79-2.9-2.39H5.5c.21 2.12 1.61 3.44 4.02 3.81V22h2v-2.15c2.36-.09 4.1-1.63 4.1-3.85 0-2.77-2.84-3.96-5.39-4.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Información Financiera</h2>
+                <p class="section-subtitle">Ingresos y situación laboral</p>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Ingresos Mensuales *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">RD$</span>
+                  <input type="text" id="s_sueldo" placeholder="35,000.00" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Código de Empleado <small style="font-weight:600;color:var(--text-muted)">(opcional)</small></label>
+                <input type="text" id="s_codigo_empleado" placeholder="Código interno de la cooperativa" />
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Entrada Promedio Mensual <small style="font-weight:600;color:var(--text-muted)">(si negocio propio)</small></label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">RD$</span>
+                  <input type="text" id="s_entrada_promedio" placeholder="0.00" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Tipo de Negocio <small style="font-weight:600;color:var(--text-muted)">(si aplica)</small></label>
+                <input type="text" id="s_tipo_negocio" placeholder="Ej: Colmado, Ferretería" />
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-2.96-3.83c-.3-.38-.94-.42-1.3-.1-.36.32-.39.97-.09 1.35l3.62 4.71c.2.26.56.42.92.42s.72-.16.92-.42l3.82-4.9c.29-.38.26-1.02-.1-1.35-.36-.31-1-.27-1.3.1l-.96 1.48z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Datos Laborales</h2>
+                <p class="section-subtitle">Información de empleo o negocio</p>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Nombre de la Empresa *</label>
+                <input type="text" id="s_empresa_nombre" placeholder="Empresa donde trabaja" required />
+              </div>
+              <div class="form-group">
+                <label>Teléfono Empresa *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="s_empresa_tel" placeholder="8290000000" pattern="[0-9]+" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Dirección Empresa *</label>
+                <input type="text" id="s_empresa_dir" placeholder="Calle, número, sector, ciudad" required />
+              </div>
+              <div class="form-group">
+                <label>Cargo *</label>
+                <input type="text" id="s_empresa_cargo" placeholder="Ej: Analista" required />
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Tiempo Empleado (años) *</label>
+                <input type="number" id="s_empresa_tiempo" min="0" step="0.1" placeholder="1.5" required />
+              </div>
+              <div class="form-group">
+                <label>Teléfono Residencia *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="s_tel_residencia" placeholder="8290000000" pattern="[0-9]+" required />
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M11.8 10.9c-2.27-.59-3-1.38-3-2.15 0-1.09.9-1.85 2.05-1.85 1.54 0 2.63 1.08 2.84 2.88h2.02c-.3-2.22-1.69-4.04-4.89-4.35V2h-2v2.26c-2.31.08-4.1 1.51-4.1 3.85 0 2.92 2.88 3.96 5.26 4.41 2.28.45 3 1.3 3 2.15 0 .8-.72 1.72-2.12 1.72-1.6 0-2.67-.79-2.9-2.39H5.5c.21 2.12 1.61 3.44 4.02 3.81V22h2v-2.15c2.36-.09 4.1-1.63 4.1-3.85 0-2.77-2.84-3.96-5.39-4.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Referencias Comerciales</h2>
+                <p class="section-subtitle">Máximo 3 (al menos 1)</p>
+              </div>
+            </div>
+
+            <div class="form-grid grid-3" id="refsComerciales">
+              <div class="form-group">
+                <label>Nombre Comercial 1 *</label>
+                <input type="text" id="rc_nombre_1" required />
+                <input type="text" id="rc_dir_1" placeholder="Dirección 1" required style="margin-top:6px" />
+                <div class="input-prefix-wrapper" style="margin-top:6px">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="rc_tel_1" placeholder="8290000000" pattern="[0-9]+" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Nombre Comercial 2</label>
+                <input type="text" id="rc_nombre_2" />
+                <input type="text" id="rc_dir_2" placeholder="Dirección 2" style="margin-top:6px" />
+                <div class="input-prefix-wrapper" style="margin-top:6px">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="rc_tel_2" placeholder="8290000000" pattern="[0-9]+" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Nombre Comercial 3</label>
+                <input type="text" id="rc_nombre_3" />
+                <input type="text" id="rc_dir_3" placeholder="Dirección 3" style="margin-top:6px" />
+                <div class="input-prefix-wrapper" style="margin-top:6px">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="rc_tel_3" placeholder="8290000000" pattern="[0-9]+" />
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M11.8 10.9c-2.27-.59-3-1.38-3-2.15 0-1.09.9-1.85 2.05-1.85 1.54 0 2.63 1.08 2.84 2.88h2.02c-.3-2.22-1.69-4.04-4.89-4.35V2h-2v2.26c-2.31.08-4.1 1.51-4.1 3.85 0 2.92 2.88 3.96 5.26 4.41 2.28.45 3 1.3 3 2.15 0 .8-.72 1.72-2.12 1.72-1.6 0-2.67-.79-2.9-2.39H5.5c.21 2.12 1.61 3.44 4.02 3.81V22h2v-2.15c2.36-.09 4.1-1.63 4.1-3.85 0-2.77-2.84-3.96-5.39-4.41z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Referencias Personales</h2>
+                <p class="section-subtitle">Máximo 3 (al menos 1)</p>
+              </div>
+            </div>
+
+            <div class="form-grid grid-3" id="refsPersonales">
+              <div class="form-group">
+                <label>Nombre Personal 1 *</label>
+                <input type="text" id="rp_nombre_1" required />
+                <input type="text" id="rp_dir_1" placeholder="Dirección 1" required style="margin-top:6px" />
+                <div class="input-prefix-wrapper" style="margin-top:6px">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="rp_tel_1" placeholder="8290000000" pattern="[0-9]+" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Nombre Personal 2</label>
+                <input type="text" id="rp_nombre_2" />
+                <input type="text" id="rp_dir_2" placeholder="Dirección 2" style="margin-top:6px" />
+                <div class="input-prefix-wrapper" style="margin-top:6px">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="rp_tel_2" placeholder="8290000000" pattern="[0-9]+" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Nombre Personal 3</label>
+                <input type="text" id="rp_nombre_3" />
+                <input type="text" id="rp_dir_3" placeholder="Dirección 3" style="margin-top:6px" />
+                <div class="input-prefix-wrapper" style="margin-top:6px">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="rp_tel_3" placeholder="8290000000" pattern="[0-9]+" />
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- SUBSECCIÓN 3: INFORMACIÓN DEL PRÉSTAMO -->
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M19 8H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 14H5V10h14v12z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Detalles del Préstamo</h2>
+                <p class="section-subtitle">Monto, duración y deudas</p>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Monto Solicitado *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">RD$</span>
+                  <input type="text" id="loan_monto_solicitado" placeholder="50,000.00" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Duración (meses) *</label>
+                <input type="number" id="loan_duracion" placeholder="12" min="1" max="120" required />
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Monto Total de Ahorros *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">RD$</span>
+                  <input type="text" id="s_ahorros_totales" placeholder="0.00" required />
+                </div>
+                <small class="note">Total acumulado de ahorros (>= 0)</small>
+              </div>
+              <div class="form-group">
+                <label>Ahorro Mensual *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">RD$</span>
+                  <input type="text" id="s_ahorro_mensual" placeholder="0.00" required />
+                </div>
+                <small class="note">Cantidad que ahorra cada mes (obligatorio, > 0)</small>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group" id="quotaDisplayWrapper" style="display:flex;flex-direction:column;justify-content:center">
+                <label>Cuota Mensual Estimada</label>
+                <div id="quotaDisplay" style="font-weight:700;font-size:18px;color:var(--primary)">--</div>
+                <small class="note">Calculado usando la tasa anual configurada por el administrador</small>
+              </div>
+              <div class="form-group" style="display:flex;flex-direction:column;justify-content:center">
+                <label>Observación de Ahorros</label>
+                <div id="savingsNote" style="font-size:13px;color:var(--text-muted)">Ingrese monto total y ahorro mensual</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>¿Tiene deudas en otras entidades?</label>
+              <select id="loan_deuda_banco">
+                <option value="">Seleccione</option>
+                <option value="Si">Sí</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Especifique otras entidades acreedoras</label>
+              <input type="text" id="loan_otra_entidad" placeholder="Banco, tarjetas de crédito, etc." />
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn" id="backTo1">← Anterior</button>
+              <button type="button" class="btn btn-primary big" id="toStep3">Continuar →</button>
+            </div>
+          </fieldset>
+
+          <!-- PASO 3: DATOS DEL GARANTE -->
+          <fieldset class="panel hidden" data-panel="3">
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Datos del Garante</h2>
+                <p class="section-subtitle">Información del avalista (si aplica)</p>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Nombre del Garante *</label>
+                <input type="text" id="g_nombre" placeholder="Nombre" required />
+              </div>
+              <div class="form-group">
+                <label>Apellidos del Garante *</label>
+                <input type="text" id="g_apellido" placeholder="Apellidos" required />
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Estado Civil Garante *</label>
+                <select id="g_estado_civil" required>
+                  <option value="">Seleccione</option>
+                  <option value="Soltero(a)">Soltero(a)</option>
+                  <option value="Casado(a)">Casado(a)</option>
+                  <option value="Unión Libre">Unión Libre</option>
+                  <option value="Divorciado(a)">Divorciado(a)</option>
+                  <option value="Viudo(a)">Viudo(a)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Profesión u Oficio Garante *</label>
+                <input type="text" id="g_profesion" placeholder="Ej: Abogado" required />
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Cédula del Garante *</label>
+                <input type="text" id="g_cedula" placeholder="000-0000000-0" pattern="[0-9\-]+" required />
+              </div>
+              <div class="form-group">
+                <label>Código <small style="font-weight:600;color:var(--text-muted)">(opcional)</small></label>
+                <input type="text" id="g_codigo" placeholder="Código identificador" />
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Tipo de Negocio (si aplica)</label>
+                <input type="text" id="g_tipo_negocio" placeholder="Ej: Comercio minorista" />
+              </div>
+              <div class="form-group">
+                <label>Entrada Promedio Mensual</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">RD$</span>
+                  <input type="text" id="g_entrada_promedio" placeholder="0.00" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-grid grid-2">
+              <div class="form-group">
+                <label>Teléfono del Garante *</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix">+809</span>
+                  <input type="tel" id="g_telefono" placeholder="8298766762" pattern="[0-9]+" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>WhatsApp del Garante</label>
+                <input type="tel" id="g_movil" placeholder="+1 829 876 6762" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Teléfono Residencia Garante</label>
+              <div class="input-prefix-wrapper">
+                <span class="input-prefix">+809</span>
+                <input type="tel" id="g_tel_residencia" placeholder="8290000000" pattern="[0-9]+" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Correo Electrónico del Garante</label>
+              <input type="email" id="g_email" placeholder="ejemplo@correo.com" />
+            </div>
+
+            <div class="form-group">
+              <label>Dirección del Garante *</label>
+              <input type="text" id="g_direccion" placeholder="Calle, número, ciudad" required />
+            </div>
+
+            <div class="form-group">
+              <label>Relación con el Solicitante *</label>
+              <select id="g_relacion" required>
+                <option value="">Seleccione relación</option>
+                <option value="Familiar">Familiar</option>
+                <option value="Amigo">Amigo</option>
+                <option value="Compañero de trabajo">Compañero de trabajo</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn" id="backTo2">← Anterior</button>
+              <button type="button" class="btn btn-primary big" id="toStep4">Continuar →</button>
+            </div>
+          </fieldset>
+
+          <!-- PASO 4: AUTORIZACIÓN Y PRIVACIDAD -->
+          <fieldset class="panel hidden" data-panel="4">
+            <div class="section-header">
+              <div class="section-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                </svg>
+              </div>
+              <div>
+                <h2>Autorización y Privacidad</h2>
+                <p class="section-subtitle">Confirme su consentimiento</p>
+              </div>
+            </div>
+
+            <!-- SECCIÓN DE FIRMA DIGITAL -->
+            <div class="signature-section">
+              <h3>Espacios de Firma</h3>
+              <p class="section-subtitle-small">Señale los recuadros de firma para autorizar su solicitud</p>
+              
+              <div class="sign-grid">
+                <div class="signature-box">
+                  <div class="sig-frame"></div>
+                  <div class="sig-label">Firma del Solicitante</div>
+                  <small class="sig-note">Autorizo el procesamiento de esta solicitud</small>
+                </div>
+                <div class="signature-box">
+                  <div class="sig-frame"></div>
+                  <div class="sig-label">Firma del Garante</div>
+                  <small class="sig-note">Autorizo como avalista</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- SECCIÓN DE PRIVACIDAD Y TÉRMINOS -->
+            <div class="privacy-section">
+              <div class="privacy-card">
+                <div class="privacy-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                  </svg>
+                </div>
+                <h3>Protección de Datos y Privacidad</h3>
+                <p class="privacy-text">
+                  Al enviar este formulario <strong>autorizo a la cooperativa</strong> a:
+                </p>
+                <ul class="privacy-list">
+                  <li>Verificar mi información personal y de contacto</li>
+                  <li>Revisar mi historial crediticio</li>
+                  <li>Consultar con entidades de crédito</li>
+                  <li>Utilizar mis datos para evaluación de préstamo</li>
+                  <li>Mantener mis datos seguros y protegidos</li>
+                </ul>
+                <p class="privacy-text-small">
+                  Sus datos se protegen conforme a la Ley de Protección de Datos y se utilizan únicamente con fines de evaluación crediticia.
+                </p>
+                <div class="legal-clause" style="margin-top:16px;padding:12px;border:1px solid var(--border-soft);border-radius:12px;background:var(--bg-subtle);font-size:12px;line-height:1.5">
+                  <strong>Cláusula de Mora:</strong> El solicitante reconoce que si incurre en <strong>mora mayor a cinco (5) días</strong> en el pago de cualquier cuota, la cooperativa aplicará un <strong>interés moratorio del cinco por ciento (5%) mensual</strong> sobre el monto vencido, acumulable mientras persista la mora. Asimismo, acepta que la cooperativa podrá, conforme a las disposiciones legales y al contrato suscrito, iniciar las gestiones de cobro, retención, compensación o <strong>ejecución de garantías y bienes muebles o inmuebles</strong> ofrecidos en respaldo del préstamo hasta satisfacer la obligación pendiente, sin perjuicio de otras acciones legales adicionales.
+                </div>
+              </div>
+
+              <div class="checkbox-group">
+                <input type="checkbox" id="privacy_accept" />
+                <label for="privacy_accept" class="checkbox-label">
+                  Acepto enviar mi información y autorizo la evaluación de mi solicitud de préstamo
+                </label>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="button" class="btn" id="backTo3">← Anterior</button>
+              <button type="submit" class="btn btn-primary big submit-btn" id="submitBtn">
+                <span class="btn-icon">✓</span>
+                ENVIAR SOLICITUD
+              </button>
+            </div>
+
+            <small class="form-footer">
+              ✓ Todos los datos se procesan de forma segura y confidencial
+            </small>
+          </fieldset>
+
+        </form>
+      </section>
+
+      <footer class="footer">
+        <small>Demo - Cooperativa • Datos guardados localmente en su navegador</small>
+      </footer>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script>
+      // Mostrar logo público si existe en localStorage o en el archivo del proyecto
+      (function(){
+        const img = document.getElementById('publicLogo');
+        const fallback = document.getElementById('publicLogoFallback');
+        try{
+          const data = localStorage.getItem('coop_logo');
+          if(data){
+            img.src = data; img.style.display = 'block'; fallback.style.display = 'none';
+            return;
+          }
+        }catch(e){/* ignore */}
+  // Intentar archivo por defecto (usar logodecoopatria.png en el proyecto)
+  const test = new Image();
+  test.onload = function(){ img.style.display = 'block'; fallback.style.display = 'none'; };
+  test.onerror = function(){ img.style.display = 'none'; fallback.style.display = 'block'; };
+  test.src = './logodecoopatria.png';
+      })();
+    </script>
+  </body>
+</html>

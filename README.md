@@ -1,292 +1,290 @@
-# 📋 Sistema de Gestión de Documentos y Pedidos
+# Sistema de Gestión de Solicitudes de Préstamos - Cooperativa
 
-<div align="center">
+## 📋 Descripción
 
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+Plataforma web moderna para la gestión completa de solicitudes de préstamos de una cooperativa financiera. Sistema desarrollado con **HTML5**, **CSS3** y **JavaScript vanilla** (sin dependencias externas en el frontend, solo librerías CDN para PDF).
 
-**🚀 Sistema completo de gestión de documentos y pedidos con roles de usuario avanzados**
+### Características Principales
 
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-2.0-blue.svg)](CHANGELOG.md)
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)]()
-
-</div>
-
----
-
-## 🎯 **Características Principales**
-
-### 👥 **Sistema de Roles Avanzado**
-- **👑 Administrador**: Control total del sistema
-- **👤 Usuario Normal**: Gestión de documentos y pedidos
-- **📦 Editor/Almacén**: Gestión de pedidos recibidos y comentarios internos
-- **🔒 Dueño**: Acceso administrativo completo
-
-### 📄 **Gestión de Documentos**
-- ✅ Subida de documentos (PDF, Word, Excel)
-- ✅ Sistema de comentarios por documento
-- ✅ Control de acceso por usuario
-- ✅ Eliminación segura de documentos
-
-### 📋 **Sistema de Pedidos**
-- ✅ Creación de solicitudes con archivos adjuntos
-- ✅ Estados: Pendiente, Aprobado, Rechazado, En Revisión, Cerrado
-- ✅ Sistema de comentarios públicos e internos
-- ✅ Notificaciones automáticas
-- ✅ Descarga de archivos adjuntos
-
-### 🔒 **Comentarios Internos**
-- ✅ Comentarios visibles solo para almacén/administradores
-- ✅ Comunicación interna segura
-- ✅ Notificaciones diferenciadas por tipo
-
-### 📊 **Reportes Exportables**
-- ✅ Generación de reportes en Excel
-- ✅ Filtros por estado, fecha, solicitante
-- ✅ Exportación directa desde el navegador
+✅ **Formulario Wizard de 4 Pasos** - Experiencia fluida y progresiva  
+✅ **Diseño Corporativo 2025** - Glassmorphism, fintech premium  
+✅ **Datos Personales** - Cédula, edad, nombres, zona  
+✅ **Contacto & Financiero** - Teléfono, email, ingresos, deudas  
+✅ **Garante** - Información del avalista  
+✅ **Privacidad** - Autorización y consentimiento de datos  
+✅ **Panel Administrativo** - Listado, detalles, cambio de estado  
+✅ **Exportación PDF** - Con logo, datos, firma, fecha  
+✅ **Persistencia Local** - localStorage (sin servidor backend)  
+✅ **Responsive** - Laptop, tablet, móvil  
+✅ **Animaciones Suaves** - Transiciones profesionales  
 
 ---
 
-## 🏗️ **Arquitectura del Proyecto**
+## 🚀 Cómo Usar
 
-```
-📁 documentos_app2/
-├── 📁 admin/                    # Herramientas de administración
-│   ├── configurar_editor.php    # Configuración de roles
-│   ├── limpiar_solicitudes.php  # Limpieza de datos
-│   └── notificaciones.php       # Gestión de notificaciones
-├── 📁 assets/                   # Recursos estáticos
-│   ├── 📁 css/                  # Estilos CSS
-│   ├── 📁 img/                  # Imágenes
-│   └── 📁 js/                   # JavaScript
-├── 📁 config/                   # Configuración del sistema
-│   ├── auth.php                 # Autenticación
-│   └── conexion.php             # Conexión a base de datos
-├── 📁 modules/                  # Módulos principales
-│   ├── 📁 documentos/           # Gestión de documentos
-│   ├── 📁 pedidos/              # Sistema de pedidos
-│   ├── 📁 reportes/             # Generación de reportes
-│   └── 📁 usuarios/             # Gestión de usuarios
-├── 📁 uploads/                  # Archivos subidos
-│   └── 📁 pedidos/              # Archivos de pedidos
-├── 📁 temp/                     # Archivos temporales/debug
-├── 📁 BASE DE DATOS/            # Scripts SQL
-├── index.php                    # Punto de entrada
-├── dashboard.php                # Panel principal
-└── logout.php                   # Cerrar sesión
+### 1. Iniciar el Servidor Local
+
+```bash
+cd "c:\Users\alex\Desktop\cooperativa proyect"
+python -m http.server 8000
 ```
 
----
+Luego abre tu navegador en: `http://localhost:8000`
 
-## 🚀 **Instalación Rápida**
+### 2. Estructura de Archivos
 
-### **Requisitos**
-- PHP 7.4+ 
-- MySQL 5.7+ / MariaDB 10.3+
-- Servidor web (Apache/Nginx)
-- XAMPP/WAMP/LAMP (recomendado)
-
-### **Pasos de Instalación**
-
-1. **📥 Clonar el repositorio**
-   ```bash
-   git clone https://github.com/ElMOB04/Online-Documents-local.git
-   cd Online-Documents-local
-   ```
-
-2. **🗄️ Configurar Base de Datos**
-   ```sql
-   -- Importar el archivo de base de datos
-   mysql -u root -p < BASE_DE_DATOS/documents.sql
-   ```
-
-3. **⚙️ Configurar Conexión**
-   ```php
-   // Editar config/conexion.php
-   $host = 'localhost';
-   $dbname = 'documents';
-   $username = 'tu_usuario';
-   $password = 'tu_password';
-   ```
-
-4. **🔧 Configurar Rol Editor**
-   ```sql
-   -- Ejecutar en phpMyAdmin o MySQL
-   ALTER TABLE `usuarios` MODIFY `rol` ENUM('usuario','dueno','admin','almacen','Editor') DEFAULT 'usuario';
-   ```
-
-5. **🌐 Configurar Servidor Web**
-   - Apuntar el DocumentRoot a la carpeta del proyecto
-   - Asegurar permisos de escritura en `uploads/`
-
----
-
-## 👤 **Usuarios por Defecto**
-
-| Usuario | Contraseña | Rol | Descripción |
-|---------|------------|-----|-------------|
-| `admin` | `admin123` | admin | Administrador principal |
-| `almacen` | `password` | Editor | Usuario de almacén |
-| `usuario` | `123456` | usuario | Usuario normal |
-
----
-
-## 🔧 **Configuración Avanzada**
-
-### **Roles de Usuario**
-```php
-// Roles disponibles
-'usuario'    // Usuario normal - puede crear documentos y pedidos
-'admin'      // Administrador - acceso total
-'dueno'      // Dueño - acceso administrativo
-'almacen'    // Almacén - gestión de pedidos (deprecated)
-'Editor'     // Editor - gestión de pedidos recibidos
+```
+cooperativa project/
+├── index.html          # Formulario público de solicitud
+├── admin.html          # Panel administrativo
+├── style.css           # Estilos corporativos 2025
+├── app.js              # Lógica del formulario
+├── admin.js            # Lógica del panel admin
+├── LOGO ONAMET.webp    # Logo de la cooperativa
+└── README.md           # Este archivo
 ```
 
-### **Tipos de Archivo Permitidos**
-- **Documentos**: PDF, DOC, DOCX, XLS, XLSX
-- **Pedidos**: PDF, DOC, DOCX, XLS, XLSX (múltiples archivos → ZIP)
+### 3. Formulario Público (`index.html`)
 
-### **Estados de Pedidos**
-- `pendiente` - Recién creado
-- `en_revision` - En proceso de revisión
-- `aprobada` - Aprobado por almacén
-- `rechazada` - Rechazado
-- `cerrada` - Proceso completado
+**Paso 1: Datos Personales**
+- Cédula (formato: 000-0000000-0)
+- Rango de edad (18-25, 26-35, etc.)
+- Nombre y apellidos
+- Zona de residencia
 
----
+**Paso 2: Contacto e Información Financiera**
+- Teléfono celular con prefijo +809
+- Confirmación de teléfono
+- WhatsApp (opcional)
+- Correo electrónico
+- Ingresos mensuales (RD$)
+- Otros ingresos (opcional)
+- Situación laboral (Empleado/Independiente/Otro)
+- Detalles del préstamo (monto, duración, deudas)
 
-## 📱 **Capturas de Pantalla**
+**Paso 3: Datos del Garante**
+- Nombre y apellidos
+- Cédula y código
+- Teléfono y WhatsApp
+- Email y dirección
+- Relación con solicitante
 
-<div align="center">
+**Paso 4: Autorización**
+- Espacios de firma (visuales)
+- Aceptación de privacidad y consentimiento
+- Botón "ENVIAR SOLICITUD"
 
-### 🏠 Dashboard Principal
-![Dashboard](http://imgfz.com/i/cZrM50R.jpeg)
+### 4. Panel Administrativo (`admin.html`)
 
-### 📋 Gestión de Pedidos
-![Pedidos](http://imgfz.com/i/8iHhx3o.jpeg)
-
-### 📄 Gestión de Documentos
-![Documentos](http://imgfz.com/i/S18JDLj.jpeg)
-
-### 👥 Gestión de Usuarios
-![Usuarios](http://imgfz.com/i/Rh9M6db.jpeg)
-
-</div>
-
----
-
-## 🛠️ **Funcionalidades Técnicas**
-
-### **Seguridad**
-- ✅ Autenticación por sesiones PHP
-- ✅ Control de acceso basado en roles (RBAC)
-- ✅ Validación de archivos (tipo, tamaño)
-- ✅ Sanitización de entradas
-- ✅ Protección contra inyección SQL
-
-### **Base de Datos**
-- ✅ Diseño normalizado
-- ✅ Índices optimizados
-- ✅ Transacciones para operaciones críticas
-- ✅ Constraints de integridad
-
-### **Interfaz de Usuario**
-- ✅ Diseño responsivo con Bootstrap 5.3
-- ✅ Iconos Bootstrap Icons
-- ✅ Animaciones CSS suaves
-- ✅ Feedback visual inmediato
-- ✅ Modales para confirmaciones
+- **Listado de Solicitudes** - Tarjetas con información resumida
+- **Ver Detalles** - Abre modal con datos completos
+- **Cambiar Estado** - Pendiente → Aprobada → Rechazada
+- **Exportar PDF** - Descarga documento completo con firma
+- **Subir Logo** - Personaliza el logo de la cooperativa
+- **Refrescar** - Recarga lista desde localStorage
+- **Borrar Todas** - Limpia datos (solo demo)
 
 ---
 
-## 🔄 **Flujo de Trabajo**
+## 💾 Almacenamiento de Datos
 
-```mermaid
-graph TD
-    A[Usuario inicia sesión] --> B{¿Qué rol?}
-    B -->|Usuario| C[Crear documentos/pedidos]
-    B -->|Editor| D[Gestionar pedidos recibidos]
-    B -->|Admin| E[Control total del sistema]
-    
-    C --> F[Subir archivos]
-    F --> G[Comentarios públicos]
-    
-    D --> H[Revisar pedidos]
-    H --> I[Comentarios internos]
-    I --> J[Aprobar/Rechazar]
-    
-    E --> K[Gestión usuarios]
-    E --> L[Reportes]
-    E --> M[Configuración]
+Los datos se guardan en **localStorage** del navegador:
+
+```javascript
+// Clave principal
+'solicitudes_cooperativa_v1': Array<solicitud>
+
+// Estructura de solicitud
+{
+  id: 's_1731355200000',
+  fecha: '2025-11-12T10:00:00.000Z',
+  estado: 'Pendiente',
+  datosPersonales: { cedula, edad, nombres, apellidos, zona },
+  datosContacto: { telefono, whatsapp, email, esClienteCoop },
+  infoFinanciera: { ingresosMensuales, otrosIngresos, situacionLaboral },
+  detallesPrestamo: { montoSolicitado, duracion, deudaBanco, otraEntidad },
+  garante: { nombres, apellidos, cedula, codigo, telefono, whatsapp, email, direccion, relacion }
+}
+
+// Logo de la cooperativa
+'coop_logo': 'data:image/webp;base64,...'
 ```
 
----
-
-## 📊 **Estadísticas del Proyecto**
-
-- **📁 Archivos**: 50+ archivos PHP organizados
-- **🗄️ Tablas**: 6 tablas principales
-- **👥 Roles**: 5 roles de usuario
-- **📄 Módulos**: 4 módulos principales
-- **🔧 Funcionalidades**: 20+ características
+### ⚠️ Nota Importante
+- **No hay servidor backend** - Los datos se pierden si se vacía el localStorage
+- Los datos se guardan **solo en el navegador local**
+- Para producción, implementar backend y base de datos
 
 ---
 
-## 🤝 **Contribución**
+## 🎨 Diseño Visual (2025)
 
-¿Quieres contribuir al proyecto? ¡Excelente!
+### Paleta de Colores
+- **Primario**: `#0E5DE6` (Azul corporativo)
+- **Secundario**: `#3AA6F2` (Azul claro)
+- **Acento**: `#22C1C3` (Turquesa)
+- **Fondo**: `#F8FAFC` (Gris muy claro)
+- **Texto**: `#0F172A` (Negro elegante)
 
-1. **🍴 Fork** el repositorio
-2. **🌿 Crea** una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. **💾 Commit** tus cambios (`git commit -am 'Agregar nueva funcionalidad'`)
-4. **📤 Push** a la rama (`git push origin feature/nueva-funcionalidad`)
-5. **🔄 Abre** un Pull Request
+### Tipografía
+- **Headlines**: Poppins (700)
+- **Body**: Inter (400-600)
+- **Labels**: Manrope (600)
 
----
-
-## 📞 **Soporte**
-
-¿Necesitas ayuda? 
-
-- 📧 **Email**: alexjose042121@gmail.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/ElMOB04)
-- -  **linkedin**: [linkedin](https://www.linkedin.com/in/alejandro-suarez-083261233/)
-
----
-
-## 📄 **Licencia**
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+### Efectos
+- **Glassmorphism** - backdrop-filter blur
+- **Sombras Elevadas** - Shadow system 3D
+- **Bordes Redondeados** - 12-32px
+- **Animaciones** - 0.3s easing smooth
+- **Gradientes** - Fintech premium
 
 ---
 
-## 🙏 **Agradecimientos**
+## 🔄 Flujo de Uso
 
-- **Bootstrap** por el framework CSS
-- **Bootstrap Icons** por los iconos
-- **PHP** por el lenguaje de programación
-- **MySQL** por la base de datos
+### Usuario Final
+1. Accede a `http://localhost:8000/index.html`
+2. Completa formulario en 4 pasos
+3. Valida campos automáticamente
+4. Acepta privacidad y autorización
+5. Envía solicitud
+6. ✓ Confirmación y guardado automático
+
+### Administrador
+1. Accede a `http://localhost:8000/admin.html`
+2. Ve listado de todas las solicitudes
+3. Hace clic en tarjeta para ver detalles
+4. Cambia estado (Pendiente → Aprobada/Rechazada)
+5. Exporta a PDF
+6. Descarga documento firmado
 
 ---
 
-<div align="center">
+## 📱 Responsividad
 
-**⭐ Si te gusta este proyecto, ¡dale una estrella! ⭐**
-
-![GitHub stars](https://img.shields.io/github/stars/tu-usuario/Online-Documents-local?style=social)
-![GitHub forks](https://img.shields.io/github/forks/tu-usuario/Online-Documents-local?style=social)
+| Dispositivo | Rango | Comportamiento |
+|------------|-------|----------------|
+| **Móvil** | < 480px | Stack vertical, botones full-width |
+| **Tablet** | 480-768px | Grid de 2 columnas, modal ajustado |
+| **Desktop** | 768-1024px | Grid 2 col, optimizado |
+| **Laptop** | > 1024px | Grid 3 col, layout ideal |
 
 ---
 
-**Desarrollado con ❤️ por [ElMOB04](https://github.com/ElMOB04)**
+## 🔧 Configuración
 
-</div>
+### Cambiar Colores Primarios
+En `style.css`, modifica `:root`:
+```css
+:root {
+  --primary: #0E5DE6;      /* Color azul primario */
+  --secondary: #3AA6F2;    /* Color azul claro */
+  --accent: #22C1C3;       /* Color turquesa */
+}
+```
 
+### Agregar Más Campos
+1. Añade `<input>` o `<select>` en el fieldset correspondiente
+2. Asigna un `id` único
+3. Actualiza `app.js` - referencia el elemento
+4. Agrega validación en `validateStepX()`
+5. Incluye en objeto `solicitud`
 
+### Cambiar Logo
+1. Reemplaza `LOGO ONAMET.webp` en la carpeta raíz
+2. O carga en admin.html: Panel Admin → "Subir logo"
 
+---
 
+## 📊 Validaciones
+
+### Paso 1 (Datos Personales)
+- ✓ Cédula: requerida
+- ✓ Edad: rango seleccionado
+- ✓ Nombre: no vacío
+- ✓ Apellidos: no vacío
+- ✓ Zona: seleccionada
+
+### Paso 2 (Contacto e Información)
+- ✓ Teléfono: 7+ dígitos
+- ✓ Confirmación: coincide con teléfono
+- ✓ Email: formato válido
+- ✓ Ingresos: requerido
+- ✓ Monto préstamo: requerido
+- ✓ Duración: 1-120 meses
+
+### Paso 3 (Garante)
+- ✓ Nombre: requerido
+- ✓ Apellidos: requerido
+- ✓ Teléfono: 7+ dígitos
+- ✓ Dirección: requerida
+- ✓ Relación: seleccionada
+
+### Paso 4 (Autorización)
+- ✓ Privacidad: checkbox obligatorio
+
+---
+
+## 🐛 Troubleshooting
+
+### El formulario no carga
+- Verifica que el servidor esté corriendo: `python -m http.server 8000`
+- Abre `http://localhost:8000/index.html`
+
+### Los estilos no aparecen
+- Limpia caché: Ctrl+Shift+R (Chrome) o Cmd+Shift+R (Mac)
+- Verifica que `style.css` exista en la carpeta
+
+### PDF no exporta
+- Asegúrate de que html2canvas y jsPDF cargan desde CDN
+- Prueba en Chrome/Firefox (mejor soporte)
+
+### Logo no aparece en PDF
+- Sube logo desde admin.html: "Subir logo"
+- El archivo local requiere servidor para funcionar
+
+### localStorage vacío
+- Verifica localStorage en DevTools: F12 → Application → LocalStorage
+- Completa formulario nuevamente para guardar datos
+
+---
+
+## 🔐 Seguridad (Notas)
+
+⚠️ **Esta es una demo educativa:**
+
+- ❌ No usar con datos reales en producción
+- ❌ localStorage es inseguro para datos sensibles
+- ✅ Implementar backend con autenticación
+- ✅ Encriptar datos en tránsito (HTTPS)
+- ✅ Validar datos en servidor
+- ✅ Cumplir regulaciones (RGPD, LPCCD)
+
+---
+
+## 📝 Licencia
+
+Proyecto educativo para gestión de solicitudes de préstamos.
+Uso libre con fines de enseñanza y desarrollo.
+
+---
+
+## 👨‍💻 Autor
+
+Desarrollado como solución completa de gestión de solicitudes para cooperativas.
+Diseño corporativo 2025 con tecnologías web modernas.
+
+---
+
+## 📞 Contacto & Soporte
+
+Para preguntas o reportar problemas, contacta a través de:
+- Email de administrador
+- Panel de soporte
+- Documentación técnica
+
+---
+
+**Última actualización**: Noviembre 2025  
+**Versión**: 1.0  
+**Estado**: ✅ Funcional y Listo para Uso
