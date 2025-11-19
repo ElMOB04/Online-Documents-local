@@ -233,9 +233,8 @@ graph TD
 
 ¿Necesitas ayuda? 
 
-- 📧 **Email**: soporte@tudominio.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/tu-usuario/Online-Documents-local/issues)
-- 📖 **Wiki**: [Documentación completa](https://github.com/tu-usuario/Online-Documents-local/wiki)
+- 📧 **Email**: alexjose042121@gmail.com
+- 🐛 **Issues**: [GitHub Issues](https://github.com/ElMOB04/Online-Documents-local/issues)
 
 ---
 
